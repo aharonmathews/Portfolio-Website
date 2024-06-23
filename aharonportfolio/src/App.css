@@ -1,0 +1,30 @@
+/* src/ParallaxBackground.css */
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-color: #bd1060; /* Fallback background color */
+}
+
+.image-container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(10, 50px); /* 500px image width divided by 50px pieces */
+  grid-template-rows: repeat(10, 50px); /* 500px image height divided by 50px pieces */
+  width: 500px;
+  height: 500px;
+  pointer-events: none; /* So the pieces don't capture mouse events */
+}
+
+.parallax-piece {
+  position: absolute;
+  background-size: 500px 500px; /* Size of the original image */
+  transition: transform 0.3s ease-out;
+  
+}
